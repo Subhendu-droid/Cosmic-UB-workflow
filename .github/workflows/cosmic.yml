@@ -29,7 +29,7 @@ jobs:
        - name: Cloning Private repo
          continue-on-error: true
          run: |
-           git clone https://${{ secrets.GH_NAME }}:${{ secrets.GH_TOKEN }}@github.com/${{ secrets.PR }} PR
+           git clone https://${{ secrets.GH_NAME }}:${{ secrets.GH_TOKEN }}@github.com/${{ secrets.GH_NAME }}/${{ secrets.PR }} PR
        - name: Running bot
          timeout-minutes: 350
          continue-on-error: true
@@ -38,7 +38,7 @@ jobs:
        - name: Loop
          continue-on-error: true
          run: |
-              git clone https://github.com/${{ secrets.GH_REPO }} loop
+              git clone https://github.com/${{ secrets.GH_NAME }}/${{ secrets.GH_REPO }} loop
               cd loop || exit 1
               echo $(TZ='${{ secrets.TZ }}' date) >> loop.txt
               git add loop.txt
