@@ -36,7 +36,6 @@ Add below secrets in this repo -
 - `GH_MAIL` : Your Git E-mail
 - `PR` : Put your private repo name. For e.g. Cosmic-UB-workflow
 - `GH_TOKEN` : Put your git token.
-- `GH_REPO` : Your current repo name. For e.g. Cosmic-UB-workflow.
 - `TZ` : Timezone. e.g. Asia/Kolkata.
 
 ## Deploy Your Bot
