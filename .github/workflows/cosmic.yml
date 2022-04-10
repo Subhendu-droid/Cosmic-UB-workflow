@@ -38,7 +38,7 @@ jobs:
        - name: Loop
          continue-on-error: true
          run: |
-              git clone https://github.com/${{ secrets.GH_NAME }}/$Cosmic-UB-workflow loop
+              git clone https://github.com/${{ secrets.GH_NAME }}/Cosmic-UB-workflow loop
               cd loop || exit 1
               echo $(TZ='${{ secrets.TZ }}' date) >> loop.txt
               git add loop.txt
