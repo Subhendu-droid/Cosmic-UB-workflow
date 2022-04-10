@@ -38,9 +38,9 @@ jobs:
        - name: Loop
          continue-on-error: true
          run: |
-              git clone https://github.com/${{ secrets.GH_NAME }}/${{ secrets.GH_REPO }} loop
+              git clone https://github.com/${{ secrets.GH_NAME }}/$Cosmic-UB-workflow loop
               cd loop || exit 1
               echo $(TZ='${{ secrets.TZ }}' date) >> loop.txt
               git add loop.txt
               git commit -m "Workflow : Loop $(TZ='${{ secrets.TZ }}' date)"
-              git push -q https://${{ secrets.GH_TOKEN }}@github.com/${{ secrets.GH_NAME }}/${{ secrets.GH_REPO }} HEAD:main
+              git push -q https://${{ secrets.GH_TOKEN }}@github.com/${{ secrets.GH_NAME }}/Cosmic-UB-workflow HEAD:main
